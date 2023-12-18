@@ -20,6 +20,7 @@ const loginController = async (req,res)=>{
 }
 
 const signupContorller =async (req,res)=>{
+    //console.log("hi")
     try {
         const {username , email , password } = req.body;
         if(!username || !email || !password)
@@ -31,7 +32,7 @@ const signupContorller =async (req,res)=>{
             email,
             password
         })
-        
+        console.log("hi") 
         return res.send(success(201 , "user is created"));
     } catch (err) {
        return res.send(error(401 , err.message));
